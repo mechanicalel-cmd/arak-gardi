@@ -6,180 +6,262 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#103b38">
 <title>حمام چهار فصل اراک | اراک‌گردی</title>
-<meta name="description" content="راهنمای تاریخی و تصویری حمام چهار فصل اراک؛ تاریخچه، معماری قاجاری، کاشی‌کاری‌ها، موزه و راهنمای بازدید.">
+<meta name="description" content="راهنمای تصویری و تاریخی حمام چهار فصل اراک؛ معماری، تاریخچه، کاشی‌کاری و موزه.">
 
 <style>
 :root {
-  --green: #103b38;
-  --deep: #092a29;
-  --teal: #247b73;
-  --gold: #d9b56d;
-  --cream: #fbf6e9;
-  --paper: #fffdf7;
-  --ink: #253936;
-  --muted: #64746e;
+  --green: #123c37;
+  --green-light: #1b5149;
+  --gold: #e1c17c;
+  --text: #fffaf0;
+  --muted: #e4e6d9;
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
-  background: var(--cream);
-  color: var(--ink);
   font-family: Tahoma, Arial, sans-serif;
+  color: var(--text);
   line-height: 2.15;
+  background-color: #102e2b;
 }
-a { color: inherit; }
-img { display: block; max-width: 100%; }
+
+/* عکس پس‌زمینه در تمام طول صفحه */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(
+      rgba(5, 28, 26, .66),
+      rgba(5, 28, 26, .76)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Four%20seasons%20bathroom%201.jpg?width=1800");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* لایهٔ تیره برای خواناتر شدن نوشته‌ها */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(7, 39, 35, .17);
+  pointer-events: none;
+}
+
+a { color: var(--gold); }
+
 .hero {
   min-height: 570px;
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 65px 7%;
-  color: white;
+  padding: 60px 7%;
   background:
-    linear-gradient(90deg, rgba(5,28,27,.78), rgba(5,28,27,.48)),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Four-Season%20Bathhouse%20Arak%20Iran.jpg?width=1800")
-    center/cover no-repeat;
+    linear-gradient(90deg,
+      rgba(5, 24, 23, .45),
+      rgba(5, 24, 23, .08));
+  border-bottom: 2px solid var(--gold);
 }
-.hero-content { max-width: 760px; }
+
+.hero-content { max-width: 780px; }
+
 .eyebrow {
   color: var(--gold);
-  letter-spacing: 1px;
   font-size: 14px;
   font-weight: bold;
 }
+
 h1 {
-  font-size: clamp(34px, 6vw, 62px);
+  font-size: clamp(34px, 6vw, 60px);
   line-height: 1.5;
-  margin: 10px 0;
+  margin: 12px 0;
+  text-shadow: 0 3px 12px #000;
 }
-.hero p { font-size: 18px; max-width: 680px; }
+
+.hero p {
+  font-size: 18px;
+  text-shadow: 0 2px 8px #000;
+}
+
 .button {
   display: inline-block;
   background: var(--gold);
-  color: #172f2b;
-  padding: 10px 20px;
-  border-radius: 9px;
-  margin: 8px 5px 0 0;
+  color: #153b34;
   text-decoration: none;
+  padding: 9px 18px;
+  margin: 8px 5px 0 0;
+  border-radius: 9px;
   font-weight: bold;
 }
+
 nav {
-  background: var(--deep);
-  color: white;
+  background: rgba(5, 32, 29, .94);
+  border-bottom: 1px solid rgba(225,193,124,.6);
   padding: 12px 5%;
   display: flex;
-  gap: 10px 22px;
   flex-wrap: wrap;
+  gap: 8px 20px;
   justify-content: center;
   position: sticky;
   top: 0;
   z-index: 10;
+  backdrop-filter: blur(10px);
 }
-nav a { text-decoration: none; font-size: 13px; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
 nav a:hover { color: var(--gold); }
-main { max-width: 1120px; margin: auto; padding: 28px 18px 60px; }
-section { scroll-margin-top: 75px; margin: 28px 0; }
-.panel {
-  background: var(--paper);
-  padding: clamp(20px, 4vw, 38px);
-  border-radius: 18px;
-  border: 1px solid #e7ddc7;
-  box-shadow: 0 7px 24px rgba(35,55,45,.06);
+
+main {
+  max-width: 1120px;
+  margin: auto;
+  padding: 24px 18px 55px;
 }
+
+section {
+  margin: 26px 0;
+  scroll-margin-top: 80px;
+}
+
+/* همهٔ بخش‌ها نیمه‌شفاف هستند */
+.panel {
+  background: rgba(10, 48, 43, .84);
+  border: 1px solid rgba(225,193,124,.65);
+  border-radius: 18px;
+  padding: clamp(20px, 4vw, 38px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.20);
+  backdrop-filter: blur(5px);
+}
+
 h2 {
-  color: var(--green);
-  font-size: clamp(23px, 4vw, 33px);
+  color: var(--gold);
+  font-size: clamp(23px, 4vw, 32px);
   line-height: 1.6;
   margin: 0 0 18px;
 }
+
 h2::after {
   content: "";
   display: block;
   width: 75px;
   height: 4px;
-  border-radius: 4px;
-  margin-top: 7px;
   background: var(--gold);
+  border-radius: 5px;
+  margin-top: 8px;
 }
-h3 { color: var(--teal); line-height: 1.8; }
+
+h3 { color: #f0d99e; }
+
 p { margin: 12px 0; }
+
 .lead { font-size: 17px; }
-.notice {
-  border-right: 4px solid var(--gold);
-  background: #f4eddb;
-  border-radius: 8px;
-  padding: 15px 18px;
-  margin-top: 20px;
-}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
 }
+
 .card {
-  background: var(--paper);
-  border: 1px solid #e7ddc7;
-  border-radius: 15px;
+  background: rgba(7, 34, 31, .88);
+  border: 1px solid rgba(225,193,124,.45);
+  border-radius: 14px;
   overflow: hidden;
 }
+
 .card img {
   width: 100%;
-  height: 255px;
+  height: 245px;
   object-fit: cover;
-  background: #e9e2d3;
+  background: #173a35;
 }
-.card-body { padding: 18px 20px 22px; }
-.card h3 { margin: 0 0 8px; }
-.caption { color: var(--muted); font-size: 12px; margin-top: 8px; }
+
+.card-body { padding: 16px 19px 22px; }
+
+.card h3 { margin-top: 0; }
+
 .photo {
   width: 100%;
-  max-height: 560px;
+  max-height: 520px;
   object-fit: cover;
   border-radius: 12px;
-  background: #e9e2d3;
+  border: 1px solid rgba(225,193,124,.65);
 }
+
 .two-col {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
-  gap: 25px;
+  gap: 24px;
   align-items: center;
 }
+
 .fact-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 12px;
 }
+
 .fact {
-  padding: 17px;
-  background: #edf3eb;
+  background: rgba(235,232,208,.11);
+  border: 1px solid rgba(225,193,124,.38);
+  padding: 16px;
   border-radius: 12px;
 }
-.fact strong { color: var(--green); display: block; }
-ul { padding-right: 23px; }
-li { padding: 3px 0; }
+
+.fact strong {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 5px;
+}
+
+.notice {
+  background: rgba(225,193,124,.13);
+  border-right: 4px solid var(--gold);
+  padding: 14px 17px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
 .timeline {
   border-right: 3px solid var(--gold);
   padding-right: 20px;
 }
-.timeline-item { margin: 0 0 22px; }
-.timeline-item strong { color: var(--teal); }
-footer {
-  background: var(--deep);
-  color: #f7f0df;
-  padding: 30px 7%;
-  text-align: center;
-  font-size: 13px;
+
+.timeline-item { margin-bottom: 22px; }
+
+.timeline-item strong { color: var(--gold); }
+
+.caption, .small {
+  font-size: 12px;
+  color: #e2e5d9;
 }
+
+footer {
+  background: rgba(4, 26, 24, .96);
+  border-top: 2px solid var(--gold);
+  padding: 28px 7%;
+  text-align: center;
+}
+
 footer a { color: var(--gold); }
-.small { font-size: 13px; color: var(--muted); }
+
 @media(max-width:700px) {
-  .hero { min-height: 490px; padding: 45px 22px; }
+  .hero { min-height: 470px; padding: 38px 22px; }
   .hero p { font-size: 16px; }
   .grid, .two-col, .fact-grid { grid-template-columns: 1fr; }
-  .card img { height: 230px; }
-  nav { position: static; gap: 8px 15px; }
+  .card img { height: 225px; }
+  nav { position: static; }
 }
 </style>
 </head>
@@ -191,17 +273,16 @@ footer a { color: var(--gold); }
     <div class="eyebrow">اراک‌گردی | سفر به دل تاریخ</div>
     <h1>حمام چهار فصل اراک</h1>
     <p>
-      بنایی از روزگار قاجار که در آن، معماری، هنر کاشی‌کاری
-      و شیوهٔ زندگی مردم گذشته کنار هم قرار گرفته‌اند.
-      امروز این حمام تاریخی، فرصتی برای شناخت بخشی از تاریخ
-      اجتماعی و فرهنگی اراک است.
+      بنایی از روزگار قاجار که معماری، هنر کاشی‌کاری و
+      داستان زندگی مردم گذشته را در دل خود جای داده است.
+      به یکی از دیدنی‌ترین آثار تاریخی اراک خوش آمدی.
     </p>
-    <a class="button" href="#history">سفر به گذشته</a>
-    <a class="button" href="#gallery">دیدن گالری عکس</a>
+    <a class="button" href="#history">شروع سفر تاریخی</a>
+    <a class="button" href="#gallery">تماشای تصاویر</a>
   </div>
 </header>
 
-<nav aria-label="فهرست صفحه">
+<nav>
   <a href="#intro">معرفی</a>
   <a href="#history">تاریخچه</a>
   <a href="#name">راز نام</a>
@@ -218,30 +299,29 @@ footer a { color: var(--gold); }
 <section id="intro" class="panel">
   <h2>آشنایی با حمام چهار فصل</h2>
   <p class="lead">
-    حمام چهار فصل یکی از آثار تاریخی شناخته‌شدهٔ شهر اراک
-    در استان مرکزی است. این بنا به دلیل وسعت، تزئینات و
-    معماری چشمگیرش اهمیت دارد و امروزه به‌عنوان موزه مورد
-    توجه علاقه‌مندان تاریخ و فرهنگ قرار گرفته است.
+    حمام چهار فصل یکی از آثار تاریخی مهم شهر اراک در
+    استان مرکزی است. این بنا به معماری چشمگیر و تزئینات
+    خود شناخته می‌شود و امروزه کاربری موزه‌ای دارد.
   </p>
   <p>
-    حمام‌های عمومی در گذشته فقط محل شست‌وشو نبودند. مردم
-    برای نظافت، آماده‌شدن برای مراسم و دیدار با دیگران نیز
-    به حمام می‌رفتند. بنابراین، حمام‌ها بخشی از زندگی اجتماعی
-    شهر به شمار می‌آمدند. ساختمان حمام چهار فصل به ما کمک
-    می‌کند تصور روشن‌تری از این بخش از زندگی مردم در دورهٔ
-    قاجار داشته باشیم.
+    حمام‌های عمومی در گذشته فقط محل شست‌وشو نبودند.
+    آن‌ها بخشی از زندگی روزانهٔ مردم محسوب می‌شدند؛
+    مکانی برای نظافت، آماده‌شدن برای مراسم و گاهی
+    دیدار با دیگران. به همین دلیل، شناخت حمام‌های قدیمی
+    به ما کمک می‌کند با شیوهٔ زندگی مردم در شهرهای
+    تاریخی ایران بیشتر آشنا شویم.
   </p>
   <p>
-    آنچه این بنا را جذاب می‌کند، کنار هم قرار گرفتن یک
-    کاربری روزمره با هنر معماری است: فضای گنبددار، راهروها،
-    بخش‌های گوناگون و تزئینات کاشی، همگی نشان می‌دهند که
-    حتی یک بنای خدماتی می‌توانسته با دقت و زیبایی ساخته شود.
+    حمام چهار فصل نمونه‌ای از پیوند نیازهای روزمره با
+    هنر معماری است. شکل فضاها، سقف‌ها، راهروها و
+    کاشی‌کاری‌ها نشان می‌دهند که حتی یک بنای خدماتی
+    می‌توانسته با دقت و زیبایی طراحی شود.
   </p>
   <div class="notice">
-    <strong>ایدهٔ تماشای بنا:</strong>
-    هنگام دیدن عکس‌ها، فقط به بزرگی ساختمان توجه نکن؛
-    به شکل سقف‌ها، رنگ کاشی‌ها و چگونگی پیوند فضاهای مختلف
-    نیز دقت کن. همین جزئیات داستان بنا را کامل‌تر می‌کنند.
+    <strong>هنگام دیدن عکس‌ها:</strong>
+    به سقف‌های گنبددار، ستون‌ها، رنگ کاشی‌ها و ارتباط
+    میان بخش‌های مختلف بنا توجه کن. این جزئیات به
+    درک بهتر معماری کمک می‌کنند.
   </div>
 </section>
 
@@ -249,75 +329,74 @@ footer a { color: var(--gold); }
   <h2>تاریخچه؛ داستانی از اراک قدیم</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <strong>۱. اراک در دورهٔ قاجار</strong>
+      <strong>۱. شکل‌گیری شهر</strong>
       <p>
-        شهر اراک که در گذشته با نام سلطان‌آباد نیز شناخته
-        می‌شد، در دورهٔ قاجار شکل گرفت و گسترش پیدا کرد.
-        با رشد شهر، نیاز به فضاهای عمومی مانند بازار،
-        مسجد، آب‌انبار و حمام نیز اهمیت بیشتری یافت.
+        اراک در دورهٔ قاجار با نام سلطان‌آباد شناخته
+        می‌شد. با گسترش شهر، بناهای عمومی مانند بازار،
+        مسجد، آب‌انبار و حمام نیز برای پاسخ‌گویی به
+        نیازهای مردم اهمیت پیدا کردند.
       </p>
     </div>
     <div class="timeline-item">
       <strong>۲. ساخت حمام</strong>
       <p>
-        بنا بر معرفی‌های تاریخی منتشرشده، ساخت حمام چهار فصل
-        به اواخر دورهٔ قاجار و زمان احمدشاه نسبت داده می‌شود.
-        نام حاج محمدابراهیم خوانساری نیز با ساخت این مجموعه
-        پیوند خورده است.
+        ساخت حمام چهار فصل به اواخر دورهٔ قاجار نسبت
+        داده می‌شود. نام حاج محمدابراهیم خوانساری نیز
+        در روایت‌های مربوط به ساخت این مجموعه آمده است.
+        این بنا بخشی از میراث معماری شهر به شمار می‌رود.
       </p>
     </div>
     <div class="timeline-item">
-      <strong>۳. ثبت در فهرست آثار ملی</strong>
+      <strong>۳. ثبت ملی</strong>
       <p>
-        این حمام در فهرست آثار ملی ایران ثبت شده است.
-        ثبت ملی به معنای اهمیت تاریخی و فرهنگی بنا و ضرورت
-        حفاظت از آن برای نسل‌های آینده است.
+        حمام چهار فصل در فهرست آثار ملی ایران ثبت شده است.
+        چنین ثبتی اهمیت حفاظت از بنا را نشان می‌دهد تا
+        ویژگی‌های تاریخی و معماری آن برای نسل‌های بعد
+        باقی بماند.
       </p>
     </div>
     <div class="timeline-item">
       <strong>۴. تبدیل به موزه</strong>
       <p>
-        پس از پایان کاربری سنتی حمام و انجام اقدامات لازم
-        برای حفاظت از بنا، این مجموعه به فضای موزه‌ای تبدیل
-        شد. امروزه بازدیدکننده می‌تواند در کنار شناخت معماری،
-        با بخشی از اشیای تاریخی و فرهنگ منطقه نیز آشنا شود.
+        این مجموعه امروزه به‌عنوان موزهٔ مردم‌شناسی
+        شناخته می‌شود. بازدیدکنندگان می‌توانند ضمن
+        آشنایی با فضای تاریخی حمام، با بخش‌هایی از
+        فرهنگ و زندگی مردم منطقه نیز آشنا شوند.
       </p>
     </div>
   </div>
   <p class="small">
-    تاریخ‌های دقیق ساخت، مرمت و ثبت را بهتر است با اطلاعات
-    رسمی میراث فرهنگی تطبیق دهید؛ روایت‌های عمومی ممکن است
-    در جزئیات تفاوت داشته باشند.
+    برای استفادهٔ پژوهشی، تاریخ دقیق ساخت و ثبت بنا را
+    با منابع رسمی میراث فرهنگی تطبیق بده.
   </p>
 </section>
 
 <section id="name" class="panel">
-  <h2>چرا نام آن «چهار فصل» است؟</h2>
+  <h2>راز نام «چهار فصل»</h2>
   <div class="two-col">
     <div>
       <p>
-        نام این حمام به نقش‌ها و تزئیناتی مربوط دانسته می‌شود
-        که در آن‌ها موضوع چهار فصل سال دیده می‌شود. در هنر
-        ایرانی، فصل‌ها می‌توانند با تغییرات طبیعت، پوشش گیاهی،
-        رنگ‌ها و شیوهٔ زندگی انسان‌ها نشان داده شوند.
+        نام چهار فصل با تزئینات و نقش‌هایی پیوند داده
+        می‌شود که موضوع فصل‌های سال را به یاد می‌آورند.
+        فصل‌ها در هنر ایرانی اغلب با نشانه‌هایی از طبیعت،
+        گل‌ها، درختان و تغییرات محیط نمایش داده می‌شوند.
       </p>
       <p>
-        تصور کن در ساختمانی قدم می‌زنی که برای یک کار روزمره
-        ساخته شده، اما در بخش‌هایی از آن، تصویرها و طرح‌هایی
-        هنری وجود دارد. همین ترکیب کاربرد و هنر باعث می‌شود
-        بنا فقط یک ساختمان ساده نباشد؛ بلکه نشانه‌ای از
-        سلیقه و فرهنگ زمان خود نیز باشد.
+        این نام کنجکاوی‌برانگیز است؛ زیرا یادآوری می‌کند
+        که بناهای تاریخی فقط برای استفادهٔ روزانه ساخته
+        نمی‌شدند، بلکه هنر و سلیقهٔ زمان خود را نیز
+        بازتاب می‌دادند.
       </p>
       <p>
-        برای شناخت بهتر این موضوع، در عکس‌های کاشی‌کاری
-        به شکل گل‌ها، درختان، رنگ‌ها و تصویرهای انسانی یا
-        جانوری توجه کن. بااین‌حال، نباید هر نقش تزئینی را
-        بدون بررسی کارشناسی نماد یک فصل مشخص بدانیم.
+        هنگام مشاهدهٔ کاشی‌ها، به طرح گل‌ها، رنگ‌ها،
+        قاب‌بندی‌ها و شکل نقش‌ها دقت کن. البته برای
+        نسبت‌دادن هر نقش به یک فصل مشخص، باید توضیح
+        کارشناسان و منابع تخصصی را بررسی کرد.
       </p>
     </div>
     <img class="photo"
       src="https://commons.wikimedia.org/wiki/Special:FilePath/4%20fasl.jpg?width=1000"
-      alt="نمایی از حمام چهار فصل اراک"
+      alt="تصویر مرتبط با حمام چهار فصل اراک"
       loading="lazy">
   </div>
 </section>
@@ -325,146 +404,144 @@ footer a { color: var(--gold); }
 <section id="architecture" class="panel">
   <h2>معماری؛ زیبایی در جزئیات</h2>
   <p>
-    حمام چهار فصل نمونه‌ای از معماری حمام‌های سنتی ایران
-    است. در چنین بناهایی، ترتیب فضاها اهمیت زیادی داشت:
-    فرد از ورودی به راهروها و سپس به بخش‌های اصلی می‌رسید.
-    این مسیر به حفظ حریم خصوصی و کاهش تغییر ناگهانی دما
-    کمک می‌کرد.
+    حمام‌های سنتی برای استفاده در شرایط متفاوت طراحی
+    می‌شدند. ترتیب فضاها، مسیرهای رفت‌وآمد و شیوهٔ
+    گرم‌کردن بخش‌های داخلی اهمیت داشتند. در حمام چهار
+    فصل نیز بخش‌های مختلف بنا را باید در ارتباط با
+    کارکرد اصلی آن بررسی کرد.
   </p>
 
   <div class="grid">
     <article class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Four%20seasons%20bathroom%201.jpg?width=1000"
-           alt="فضای داخلی حمام چهار فصل اراک" loading="lazy">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Four%20seasons%20bathroom%201.jpg?width=1000"
+        alt="فضای داخلی حمام چهار فصل اراک"
+        loading="lazy">
       <div class="card-body">
         <h3>۱. فضاهای داخلی</h3>
         <p>
-          فضاهای داخلی حمام بر اساس کارکردهای مختلف طراحی
-          می‌شدند. راهروها و بخش‌های واسطه کمک می‌کردند
-          رفت‌وآمد میان قسمت‌های مختلف به‌صورت منظم انجام شود.
-          در عکس‌ها به ارتباط میان ستون‌ها، دیوارها و سقف‌ها
-          توجه کن.
+          بخش‌های داخلی حمام برای کارهای گوناگون طراحی
+          شده بودند. راهروها و فضاهای واسطه به رفت‌وآمد
+          میان قسمت‌ها نظم می‌دادند. در تصویرها به شکل
+          ستون‌ها و ارتباط آن‌ها با سقف توجه کن.
         </p>
       </div>
     </article>
 
     <article class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%85%D8%A7%D9%85%20%DA%86%D9%87%D8%A7%D8%B1%D9%81%D8%B5%D9%84%20%D8%A7%D8%B1%D8%A7%DA%A9-%D8%B3%D8%B1%D8%A8%DB%8C%D9%86%D9%87.jpg?width=1000"
-           alt="سربینهٔ حمام چهار فصل اراک" loading="lazy">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%85%D8%A7%D9%85%20%DA%86%D9%87%D8%A7%D8%B1%D9%81%D8%B5%D9%84%20%D8%A7%D8%B1%D8%A7%DA%A9-%D8%B3%D8%B1%D8%A8%DB%8C%D9%86%D9%87.jpg?width=1000"
+        alt="سربینهٔ حمام چهار فصل اراک"
+        loading="lazy">
       <div class="card-body">
-        <h3>۲. سربینه و فضای ورود</h3>
+        <h3>۲. سربینه</h3>
         <p>
-          سربینه در حمام سنتی فضای ورود و آماده‌شدن افراد
-          بود. این بخش می‌توانست فضایی برای نشستن و تعویض
-          لباس داشته باشد. شکل گنبد، ارتفاع فضا و تزئینات
-          آن از ویژگی‌هایی است که ارزش بررسی دارد.
+          سربینه فضای ورود و آماده‌شدن افراد در حمام
+          سنتی بود. در این بخش می‌شد لباس عوض کرد و
+          پیش از رفتن به فضای اصلی کمی نشست. شکل سقف
+          و تزئینات این فضا ارزش تماشا دارد.
         </p>
       </div>
     </article>
 
     <article class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%B3%D8%B1%20%D8%A8%DB%8C%D9%86%D9%87%20%D8%AD%D9%85%D8%A7%D9%85%20%DA%86%D9%87%D8%A7%D8%B1%D9%81%D8%B5%D9%84.jpg?width=1000"
-           alt="نمایی از سربینهٔ حمام تاریخی" loading="lazy">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%B3%D8%B1%20%D8%A8%DB%8C%D9%86%D9%87%20%D8%AD%D9%85%D8%A7%D9%85%20%DA%86%D9%87%D8%A7%D8%B1%D9%81%D8%B5%D9%84.jpg?width=1000"
+        alt="نمایی از سربینهٔ حمام چهار فصل"
+        loading="lazy">
       <div class="card-body">
         <h3>۳. گنبد و سقف</h3>
         <p>
-          سقف‌های گنبددار از عناصر آشنای معماری سنتی ایران
-          هستند. شکل سقف، نور و سایه را در فضا تغییر می‌دهد
-          و به ساختمان شخصیت می‌بخشد. در تصاویر این حمام،
-          به تناسب سقف با فضای زیر آن دقت کن.
+          سقف‌های گنبددار از عناصر شناخته‌شدهٔ معماری
+          سنتی ایران هستند. ارتفاع سقف، نور و سایه و
+          شکل انحنای آن می‌توانند حس متفاوتی در فضای
+          داخلی ایجاد کنند.
         </p>
       </div>
     </article>
 
     <article class="card">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Four-Season%20Bathhouse%20Arak%20Iran.jpg?width=1000"
-           alt="نمای بنا و جزئیات معماری حمام چهار فصل" loading="lazy">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Four-Season%20Bathhouse%20Arak%20Iran.jpg?width=1000"
+        alt="نمای معماری حمام چهار فصل اراک"
+        loading="lazy">
       <div class="card-body">
         <h3>۴. مصالح و مهندسی</h3>
         <p>
-          ساخت حمام به توجه به آب، رطوبت، گرما و دوام مصالح
-          نیاز داشت. انتخاب مصالح و شکل فضاها در کنار هم
-          به کارکرد بنا کمک می‌کردند. برای توضیح جزئیات
-          فنی دقیق، باید به گزارش‌های تخصصی مرمت مراجعه کرد.
+          ساخت حمام به توجه به آب، رطوبت، گرما و دوام
+          مصالح نیاز داشت. شکل فضاها و انتخاب مصالح
+          در کنار هم به کارکرد بنا کمک می‌کردند.
+          جزئیات فنی دقیق را باید در گزارش‌های تخصصی
+          مرمت بررسی کرد.
         </p>
       </div>
     </article>
   </div>
 </section>
 
-<section id="gallery">
-  <div class="panel">
-    <h2>گالری عکس‌های حمام چهار فصل</h2>
-    <p>
-      تصاویر زیر از پرونده‌هایی انتخاب شده‌اند که در مجموعهٔ
-      ویکی‌مدیا با حمام چهار فصل اراک مرتبط‌اند. برای دیدن
-      نسخهٔ اصلی، روی هر عکس بزن.
-    </p>
-    <div class="grid">
-      <a class="card" href="https://commons.wikimedia.org/wiki/File:Four-Season_Bathhouse_Arak_Iran.jpg" target="_blank" rel="noopener">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Four-Season%20Bathhouse%20Arak%20Iran.jpg?width=1000"
-             alt="عکس تاریخی حمام چهار فصل اراک" loading="lazy">
-        <div class="card-body"><h3>نمای بنا</h3><p>دیدن تصویر در ویکی‌مدیا</p></div>
-      </a>
+<section id="gallery" class="panel">
+  <h2>گالری عکس‌های حمام چهار فصل</h2>
+  <p>
+    این تصاویر از پرونده‌های مرتبط با حمام چهار فصل
+    اراک در ویکی‌مدیا انتخاب شده‌اند. اگر می‌خواهی
+    تصویر بزرگ‌تر را ببینی، روی عکس یا عنوان آن بزن.
+  </p>
+  <div class="grid">
+    <a class="card" href="https://commons.wikimedia.org/wiki/File:Four-Season_Bathhouse_Arak_Iran.jpg" target="_blank" rel="noopener">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Four-Season%20Bathhouse%20Arak%20Iran.jpg?width=1000" alt="حمام چهار فصل اراک" loading="lazy">
+      <div class="card-body"><h3>نمای بنا</h3><p>مشاهدهٔ تصویر اصلی</p></div>
+    </a>
 
-      <a class="card" href="https://commons.wikimedia.org/wiki/File:Four_seasons_bathroom_1.jpg" target="_blank" rel="noopener">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Four%20seasons%20bathroom%201.jpg?width=1000"
-             alt="تصویر حمام چهار فصل" loading="lazy">
-        <div class="card-body"><h3>فضای تاریخی</h3><p>دیدن تصویر در ویکی‌مدیا</p></div>
-      </a>
+    <a class="card" href="https://commons.wikimedia.org/wiki/File:Four_seasons_bathroom_1.jpg" target="_blank" rel="noopener">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Four%20seasons%20bathroom%201.jpg?width=1000" alt="فضای تاریخی حمام چهار فصل" loading="lazy">
+      <div class="card-body"><h3>فضای داخلی</h3><p>مشاهدهٔ تصویر اصلی</p></div>
+    </a>
 
-      <a class="card" href="https://commons.wikimedia.org/wiki/File:Chahar_Fasl_Museum_20190518_02.jpg" target="_blank" rel="noopener">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chahar%20Fasl%20Museum%2020190518%2002.jpg?width=1000"
-             alt="بخشی از موزهٔ حمام چهار فصل" loading="lazy">
-        <div class="card-body"><h3>موزهٔ حمام</h3><p>دیدن تصویر در ویکی‌مدیا</p></div>
-      </a>
+    <a class="card" href="https://commons.wikimedia.org/wiki/File:Chahar_Fasl_Museum_20190518_02.jpg" target="_blank" rel="noopener">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chahar%20Fasl%20Museum%2020190518%2002.jpg?width=1000" alt="موزهٔ حمام چهار فصل" loading="lazy">
+      <div class="card-body"><h3>بخش موزه</h3><p>مشاهدهٔ تصویر اصلی</p></div>
+    </a>
 
-      <a class="card" href="https://commons.wikimedia.org/wiki/File:Chahar_Fasl_Museum_20190518_03.jpg" target="_blank" rel="noopener">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chahar%20Fasl%20Museum%2020190518%2003.jpg?width=1000"
-             alt="نمایی از مجموعهٔ موزهٔ حمام چهار فصل" loading="lazy">
-        <div class="card-body"><h3>اشیای موزه</h3><p>دیدن تصویر در ویکی‌مدیا</p></div>
-      </a>
-    </div>
-    <p class="caption">
-      اگر عکسی بارگذاری نشد، لینک زیر آن را باز کن یا صفحهٔ
-      مجموعه را ببین. مجوز استفاده از هر تصویر را در صفحهٔ
-      همان فایل بررسی کن.
-    </p>
-    <p>
-      <a class="button" href="https://commons.wikimedia.org/wiki/Category:Four_Seasons_Hammam_(Arak)" target="_blank" rel="noopener">
-        دیدن مجموعهٔ کامل عکس‌ها
-      </a>
-    </p>
+    <a class="card" href="https://commons.wikimedia.org/wiki/File:Chahar_Fasl_Museum_20190518_03.jpg" target="_blank" rel="noopener">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chahar%20Fasl%20Museum%2020190518%2003.jpg?width=1000" alt="نمایی از موزهٔ حمام چهار فصل" loading="lazy">
+      <div class="card-body"><h3>آثار موزه</h3><p>مشاهدهٔ تصویر اصلی</p></div>
+    </a>
   </div>
+  <p>
+    <a class="button" href="https://commons.wikimedia.org/wiki/Category:Four_Seasons_Hammam_(Arak)" target="_blank" rel="noopener">دیدن مجموعهٔ کامل عکس‌ها</a>
+  </p>
+  <p class="small">
+    مجوز استفاده از هر عکس و لزوم ذکر نام عکاس را در صفحهٔ
+    اصلی همان تصویر بررسی کن.
+  </p>
 </section>
 
 <section id="museum" class="panel">
   <h2>از حمام عمومی تا موزه</h2>
   <p>
-    تغییر کاربری حمام چهار فصل به موزه، امکان تازه‌ای برای
-    آشنایی مردم با گذشته فراهم کرده است. موزه‌ها اشیای
-    تاریخی را در کنار اطلاعات و توضیحات نگهداری می‌کنند
-    تا بازدیدکننده بتواند دربارهٔ شیوهٔ زندگی، هنر و فناوری
-    دوره‌های گذشته بیشتر بداند.
+    موزه‌شدن یک بنای تاریخی باعث می‌شود مردم بتوانند
+    آن را نه‌فقط به‌عنوان یک ساختمان قدیمی، بلکه به‌عنوان
+    بخشی از میراث فرهنگی بشناسند. حمام چهار فصل امروز
+    با کاربری موزه‌ای، امکان آشنایی با معماری و بخش‌هایی
+    از فرهنگ منطقه را فراهم می‌کند.
   </p>
   <p>
-    در موزهٔ مردم‌شناسی، اشیا می‌توانند نشانه‌هایی از
-    زندگی روزمره، پوشش، حرفه‌ها و آداب مردم باشند.
-    ارزش این اشیا تنها به قدمتشان نیست؛ آن‌ها به ما کمک
-    می‌کنند دربارهٔ زندگی انسان‌هایی فکر کنیم که پیش از ما
-    در این منطقه زندگی کرده‌اند.
+    اشیای مردم‌شناسی می‌توانند دربارهٔ شیوهٔ زندگی،
+    پوشش، حرفه‌ها و ابزارهای روزمرهٔ مردم گذشته اطلاعات
+    بدهند. ارزش یک شیء تنها به قدمت آن نیست؛ کاربرد و
+    داستانی که دربارهٔ زندگی انسان‌ها بازگو می‌کند نیز
+    اهمیت دارد.
   </p>
   <p>
-    اگر هنگام بازدید با شیئی روبه‌رو شدی که نام یا کاربردش
-    را نمی‌دانی، نوشتهٔ کنار آن را بخوان. گاهی یک ابزار
-    ساده اطلاعات جالبی دربارهٔ شغل‌ها، خانه‌ها یا عادت‌های
-    مردم گذشته به ما می‌دهد.
+    اگر هنگام بازدید با وسیله‌ای روبه‌رو شدی که نام یا
+    کاربردش را نمی‌دانی، نوشتهٔ کنار آن را بخوان.
+    گاهی یک ابزار ساده سرنخ‌هایی دربارهٔ خانه‌ها،
+    شغل‌ها و عادت‌های مردم گذشته به ما می‌دهد.
   </p>
   <div class="notice">
-    <strong>نکته:</strong>
-    همهٔ اشیای یک موزه لزوماً در همان ساختمان پیدا نشده‌اند.
-    برای دانستن منشأ هر شیء باید برچسب و اطلاعات رسمی موزه
-    را بررسی کرد.
+    همهٔ اشیای یک موزه لزوماً در همان ساختمان پیدا
+    نشده‌اند؛ برای دانستن منشأ هر اثر، برچسب و اطلاعات
+    رسمی موزه را بررسی کن.
   </div>
 </section>
 
@@ -473,119 +550,106 @@ footer a { color: var(--gold); }
   <div class="fact-grid">
     <div class="fact">
       <strong>حمام، بخشی از زندگی شهر</strong>
-      حمام‌های عمومی در گذشته نقشی فراتر از نظافت داشتند
-      و در زندگی اجتماعی مردم جایگاه مهمی پیدا می‌کردند.
+      حمام‌های عمومی در گذشته نقشی فراتر از نظافت
+      داشتند و بخشی از زندگی روزمرهٔ مردم بودند.
     </div>
     <div class="fact">
-      <strong>هنر در یک بنای کاربردی</strong>
-      کاشی‌کاری و تزئینات نشان می‌دهند که زیبایی در کنار
-      نیازهای روزمره نیز اهمیت داشته است.
+      <strong>هنر در کنار کاربرد</strong>
+      تزئینات نشان می‌دهند که زیبایی در کنار نیازهای
+      روزانه نیز اهمیت داشته است.
     </div>
     <div class="fact">
       <strong>پیوند با تاریخ اراک</strong>
-      این بنا یکی از مکان‌هایی است که برای شناخت معماری
-      و زندگی شهری در دورهٔ قاجار به ما سرنخ می‌دهد.
+      این بنا برای شناخت معماری و زندگی شهری در
+      دورهٔ قاجار اهمیت دارد.
     </div>
     <div class="fact">
       <strong>کاربری تازه</strong>
-      تبدیل یک بنای تاریخی به موزه می‌تواند آن را برای
-      آموزش و آشنایی نسل‌های بعد حفظ کند.
+      تبدیل بنا به موزه راهی برای حفاظت و معرفی
+      میراث فرهنگی به نسل‌های آینده است.
     </div>
     <div class="fact">
-      <strong>نامی که کنجکاوی می‌آورد</strong>
-      نام چهار فصل، توجه بازدیدکننده را به موضوع فصل‌ها
-      و نقش‌های تزئینی بنا جلب می‌کند.
+      <strong>نام کنجکاوی‌برانگیز</strong>
+      نام چهار فصل توجه بازدیدکننده را به موضوع
+      فصل‌ها و نقش‌های تزئینی جلب می‌کند.
     </div>
     <div class="fact">
       <strong>جزئیات را آهسته ببین</strong>
-      گاهی شکل یک ستون، حاشیهٔ کاشی یا انحنای سقف
-      اطلاعات بیشتری از یک نگاه سریع به کل ساختمان می‌دهد.
+      گاهی یک ستون یا حاشیهٔ کاشی اطلاعاتی می‌دهد
+      که در نگاه سریع به کل ساختمان دیده نمی‌شود.
     </div>
   </div>
 </section>
 
 <section class="panel">
-  <h2>یک گردش کوتاه در ذهن</h2>
+  <h2>تصور کن به اراک قدیم سفر کرده‌ای</h2>
   <p>
-    تصور کن وارد بنایی قدیمی می‌شوی. پیش از هر چیز، شکل
-    سقف و فضای بزرگ روبه‌رویت توجهت را جلب می‌کند. کمی
-    جلوتر، راهروها و بخش‌های دیگری دیده می‌شوند. در اطراف،
-    طرح‌ها و رنگ‌هایی وجود دارند که باید با دقت به آن‌ها
-    نگاه کرد.
+    از ورودی وارد می‌شوی و شکل سقف و فضای روبه‌رو
+    توجهت را جلب می‌کند. کمی جلوتر، راهروها و
+    بخش‌های دیگری دیده می‌شوند. در اطراف، نقش‌ها
+    و رنگ‌هایی وجود دارند که باید با دقت تماشایشان کرد.
   </p>
   <p>
-    حالا تصور کن این فضا بیش از صد سال پیش بخشی از زندگی
-    روزانهٔ مردم بوده است. کسانی وارد آن می‌شدند، لباس
-    عوض می‌کردند، استحمام می‌کردند و دوباره به خیابان‌های
-    شهر بازمی‌گشتند. امروزه ساختمان باقی مانده و ما از
-    راه معماری و موزه می‌توانیم بخشی از زندگی آن دوران
-    را بشناسیم.
+    حالا تصور کن این بنا زمانی بخشی از زندگی روزانهٔ
+    مردم بوده است. مردم وارد حمام می‌شدند، لباس عوض
+    می‌کردند، استحمام می‌کردند و دوباره به خیابان‌های
+    شهر بازمی‌گشتند. امروز ساختمان باقی مانده و ما
+    از راه معماری و موزه می‌توانیم بخشی از زندگی
+    آن دوران را بهتر بشناسیم.
   </p>
   <p>
-    به همین دلیل، بازدید از یک بنای تاریخی فقط دیدن دیوار
-    و سقف نیست؛ فرصتی است برای پرسیدن اینکه مردم چگونه
-    زندگی می‌کردند و چگونه نیازهای خود را با دانش و هنر
+    بازدید از یک بنای تاریخی فقط دیدن دیوار و سقف نیست؛
+    فرصتی است برای پرسیدن اینکه مردم چگونه زندگی
+    می‌کردند و چگونه نیازهای خود را با دانش و هنر
     زمانشان پاسخ می‌دادند.
   </p>
 </section>
 
 <section id="visit" class="panel">
   <h2>راهنمای بازدید</h2>
-  <h3>کجا قرار دارد؟</h3>
+  <h3>نشانی</h3>
   <p>
     حمام چهار فصل در شهر اراک، استان مرکزی، ایران قرار دارد.
-    برای پیدا کردن مسیر دقیق و بررسی محل ورودی، از نقشه
-    و اطلاعات به‌روز استفاده کن.
+    برای پیدا کردن مسیر دقیق، از نقشه استفاده کن.
   </p>
   <p>
-    <a class="button" href="https://www.google.com/maps/search/?api=1&query=حمام+چهار+فصل+اراک" target="_blank" rel="noopener">
-      باز کردن موقعیت در نقشه
-    </a>
+    <a class="button" href="https://www.google.com/maps/search/?api=1&query=حمام+چهار+فصل+اراک" target="_blank" rel="noopener">باز کردن موقعیت در نقشه</a>
   </p>
 
-  <h3>قبل از رفتن</h3>
+  <h3>پیش از بازدید</h3>
   <ul>
-    <li>ساعت کاری و وضعیت بازبودن موزه را پیش از حرکت بررسی کن.</li>
-    <li>دربارهٔ هزینهٔ ورودی و تخفیف‌های احتمالی از مرجع رسمی سؤال کن.</li>
-    <li>به تابلوهای راهنما و مقررات حفاظت از بنا توجه کن.</li>
+    <li>ساعت کاری و وضعیت بازبودن موزه را بررسی کن.</li>
+    <li>دربارهٔ هزینهٔ ورودی از مرجع رسمی سؤال کن.</li>
+    <li>به تابلوهای راهنما و مقررات حفاظت توجه کن.</li>
     <li>از لمس‌کردن کاشی‌ها و آثار تاریخی خودداری کن.</li>
-    <li>اگر عکاسی مجاز است، مراقب باش به آثار و دیگر بازدیدکنندگان آسیبی نرسد.</li>
+    <li>شرایط عکاسی را در محل بررسی کن.</li>
   </ul>
-
   <div class="notice">
-    ساعت بازدید، قیمت بلیت و شرایط دسترسی ممکن است تغییر کنند.
-    این اطلاعات در این صفحه به‌صورت قطعی اعلام نشده‌اند؛
-    پیش از بازدید آن‌ها را بررسی کن.
+    ساعت بازدید، قیمت بلیت و شرایط دسترسی ممکن است
+    تغییر کنند؛ پیش از حرکت اطلاعات روز را بررسی کن.
   </div>
 </section>
 
 <section id="sources" class="panel">
   <h2>منابع و مطالعهٔ بیشتر</h2>
   <p>
-    برای مطالعهٔ بیشتر و بررسی عکس‌ها، از منابع زیر استفاده کن.
-    اطلاعات تاریخی مهم را بهتر است با چند منبع معتبر تطبیق دهی.
+    برای دیدن عکس‌های بیشتر و بررسی اطلاعات تاریخی،
+    از منابع زیر استفاده کن:
   </p>
   <ul>
     <li>
-      <a href="https://commons.wikimedia.org/wiki/Category:Four_Seasons_Hammam_(Arak)" target="_blank" rel="noopener">
-        ویکی‌مدیا کامنز: مجموعهٔ عکس‌های حمام چهار فصل اراک
-      </a>
+      <a href="https://commons.wikimedia.org/wiki/Category:Four_Seasons_Hammam_(Arak)" target="_blank" rel="noopener">ویکی‌مدیا کامنز: عکس‌های حمام چهار فصل</a>
     </li>
     <li>
-      <a href="https://en.wikipedia.org/wiki/Four_Seasons_Bathhouse" target="_blank" rel="noopener">
-        ویکی‌پدیا: معرفی انگلیسی حمام چهار فصل
-      </a>
+      <a href="https://en.wikipedia.org/wiki/Four_Seasons_Bathhouse" target="_blank" rel="noopener">ویکی‌پدیا: معرفی انگلیسی بنا</a>
     </li>
     <li>
-      <a href="https://www.karnaval.ir/things-to-do/the-four-season-bathhouse-arak" target="_blank" rel="noopener">
-        کارناوال: معرفی، تاریخچه و معماری حمام چهار فصل
-      </a>
+      <a href="https://www.karnaval.ir/things-to-do/the-four-season-bathhouse-arak" target="_blank" rel="noopener">کارناوال: معرفی حمام چهار فصل</a>
     </li>
   </ul>
   <p class="small">
-    عکس‌ها ممکن است مجوزهای متفاوتی داشته باشند. اگر این
-    وب‌سایت را عمومی منتشر می‌کنی، شرایط مجوز و ذکر نام
-    عکاس را در صفحهٔ هر تصویر بررسی کن.
+    برای تحقیق رسمی، اطلاعات تاریخی را با منابع معتبر
+    میراث فرهنگی تطبیق بده.
   </p>
 </section>
 
@@ -593,10 +657,11 @@ footer a { color: var(--gold); }
 
 <footer>
   <p><strong>اراک‌گردی</strong> — روایت مکان‌هایی که تاریخ را زنده نگه می‌دارند.</p>
-  <p>این صفحه برای آشنایی آموزشی با حمام چهار فصل اراک تهیه شده است.</p>
+  <p>راهنمای آموزشی و تصویری حمام چهار فصل اراک</p>
   <p><a href="index.html">بازگشت به صفحهٔ اصلی اراک‌گردی</a></p>
 </footer>
 
 </body>
 </html>
+
 
